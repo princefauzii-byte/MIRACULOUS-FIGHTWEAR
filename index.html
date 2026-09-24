@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MIRACULOUS Fightwear — premium combat sports apparel and equipment.">
+  <title>MIRACULOUS — Fightwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">FREE SHIPPING ON ORDERS OVER RP500.000 <span>•</span> NEW DROP 2026</div>
+
+  <header class="header" id="top">
+    <a class="brand" href="#home" aria-label="MIRACULOUS home">
+      <img src="images/logo/miraculous-logo.png" alt="MIRACULOUS logo">
+    </a>
+
+    <nav class="nav" id="mainNav">
+      <a href="#home">HOME</a>
+      <a href="#shop">SHOP</a>
+      <a href="#categories">CATEGORIES</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Open search">⌕</button>
+      <button class="cart-btn" id="cartToggle" aria-label="Open cart">CART <span id="cartCount">0</span></button>
+      <button class="menu-btn" id="menuToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="search-panel" id="searchPanel">
+    <div class="search-inner">
+      <input type="search" id="searchInput" placeholder="Search fightwear..." autocomplete="off">
+      <button id="searchClose" aria-label="Close search">×</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">MIRACULOUS / FIGHTWEAR 2026</p>
+        <h1>BUILT<br><span>TO FIGHT.</span></h1>
+        <p class="hero-text">Performance fightwear for fighters who train harder, move faster, and refuse to settle.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#shop">SHOP COLLECTION</a>
+          <a class="text-link" href="#about">OUR STORY <span>↗</span></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="MIRACULOUS fightwear visual">
+        <div class="hero-ring ring-one"></div>
+        <div class="hero-ring ring-two"></div>
+        <div class="hero-badge">M<br><small>FIGHT</small></div>
+        <div class="hero-word">MIRACULOUS</div>
+      </div>
+      <div class="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
+
+    <section class="ticker">
+      <div class="ticker-track">
+        <span>FIGHT DIFFERENT</span><b>✦</b><span>DO IT BETTER</span><b>✦</b>
+        <span>BUILT FOR FIGHTERS</span><b>✦</b><span>FIGHT DIFFERENT</span><b>✦</b>
+        <span>DO IT BETTER</span><b>✦</b><span>BUILT FOR FIGHTERS</span><b>✦</b>
+      </div>
+    </section>
+
+    <section class="section categories" id="categories">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE</p>
+          <h2>SHOP BY <span>CATEGORY</span></h2>
+        </div>
+        <p class="section-note">Everything you need for training, sparring, and fight night.</p>
+      </div>
+
+      <div class="category-grid">
+        <button class="category-card category-large" data-category="Boxing">
+          <div class="category-bg boxing-bg"></div>
+          <div class="category-content"><span>01</span><h3>BOXING</h3><p>TRUNKS • GLOVES • WRAPS</p></div>
+        </button>
+        <button class="category-card" data-category="Muay Thai">
+          <div class="category-bg muay-bg"></div>
+          <div class="category-content"><span>02</span><h3>MUAY THAI</h3><p>SHORTS • GEAR</p></div>
+        </button>
+        <button class="category-card" data-category="MMA">
+          <div class="category-bg mma-bg"></div>
+          <div class="category-content"><span>03</span><h3>MMA</h3><p>SHORTS • RASHGUARDS</p></div>
+        </button>
+        <button class="category-card" data-category="Apparel">
+          <div class="category-bg apparel-bg"></div>
+          <div class="category-content"><span>04</span><h3>APPAREL</h3><p>TEE • HOODIE • CAP</p></div>
+        </button>
+      </div>
+    </section>
+
+    <section class="section shop" id="shop">
+      <div class="section-heading shop-heading">
+        <div>
+          <p class="eyebrow">THE COLLECTION</p>
+          <h2>FEATURED <span>FIGHTWEAR</span></h2>
+        </div>
+        <div class="shop-tools">
+          <div class="filters" id="filters">
+            <button class="filter active" data-filter="All">ALL</button>
+            <button class="filter" data-filter="Boxing">BOXING</button>
+            <button class="filter" data-filter="Muay Thai">MUAY THAI</button>
+            <button class="filter" data-filter="MMA">MMA</button>
+            <button class="filter" data-filter="Apparel">APPAREL</button>
+          </div>
+          <select id="sortSelect" aria-label="Sort products">
+            <option value="featured">FEATURED</option>
+            <option value="low">PRICE: LOW</option>
+            <option value="high">PRICE: HIGH</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state" id="emptyState">No products found.</p>
+    </section>
+
+    <section class="drop-banner">
+      <div>
+        <p class="eyebrow">MIRACULOUS / NEW DROP</p>
+        <h2>NO EXCUSES.<br><span>JUST ROUNDS.</span></h2>
+        <p>Meet the 2026 collection — designed around movement, durability, and fight-day attitude.</p>
+        <a class="btn btn-white" href="#shop">SHOP NEW DROP</a>
+      </div>
+      <div class="drop-mark">M<br><span>26</span></div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-mark">M</div>
+      <div class="about-copy">
+        <p class="eyebrow">WHY MIRACULOUS</p>
+        <h2>FIGHTWEAR WITH<br><span>A PURPOSE.</span></h2>
+        <p>We believe what you wear should keep up with the work you put in. MIRACULOUS is built around clean design, fighter-first function, and a mindset that says: do it better.</p>
+        <div class="values">
+          <div><strong>01</strong><h3>PERFORMANCE</h3><p>Designed for movement and hard sessions.</p></div>
+          <div><strong>02</strong><h3>DURABILITY</h3><p>Made to stay with you round after round.</p></div>
+          <div><strong>03</strong><h3>IDENTITY</h3><p>Fightwear that looks as sharp as it feels.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <div>
+        <p class="eyebrow">JOIN THE COMMUNITY</p>
+        <h2>STAY IN THE<br><span>FIGHT.</span></h2>
+      </div>
+      <form id="newsletterForm">
+        <label for="email">Get new drops, offers, and fightwear updates.</label>
+        <div class="newsletter-row">
+          <input type="email" id="email" placeholder="your@email.com" required>
+          <button class="btn btn-primary" type="submit">SUBSCRIBE</button>
+        </div>
+        <p class="form-message" id="formMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="images/logo/miraculous-logo.png" alt="MIRACULOUS">
+      <p>DO IT BETTER.</p>
+    </div>
+    <div class="footer-links">
+      <div><h4>SHOP</h4><a href="#shop">All Products</a><a href="#shop">Boxing</a><a href="#shop">Muay Thai</a><a href="#shop">MMA</a></div>
+      <div><h4>INFO</h4><a href="#about">About Us</a><a href="#">Size Guide</a><a href="#">Shipping</a><a href="#">FAQ</a></div>
+      <div><h4>FOLLOW</h4><a href="#" target="_blank" rel="noreferrer">Instagram</a><a href="#" target="_blank" rel="noreferrer">TikTok</a><a href="#" target="_blank" rel="noreferrer">WhatsApp</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 MIRACULOUS FIGHTWEAR</span><span>BUILT TO FIGHT. MADE TO BE DIFFERENT.</span></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="drawer-head"><h2>YOUR CART</h2><button id="cartClose">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty">Your cart is empty.<br><a href="#shop" id="browseProducts">Browse products →</a></div>
+    <div class="cart-footer">
+      <div><span>SUBTOTAL</span><strong id="cartTotal">Rp0</strong></div>
+      <button class="btn btn-primary full" id="checkoutBtn">CHECKOUT</button>
+      <small>Demo checkout for slicing assignment.</small>
+    </div>
+  </aside>
+
+  <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-label="Product detail">
+    <button class="modal-close" id="modalClose">×</button>
+    <div class="modal-product">
+      <div class="modal-visual" id="modalVisual"></div>
+      <div class="modal-info">
+        <p class="eyebrow" id="modalCategory"></p>
+        <h2 id="modalName"></h2>
+        <p class="modal-price" id="modalPrice"></p>
+        <p id="modalDescription"></p>
+        <div class="option-block"><label>SIZE</label><div class="size-options" id="sizeOptions"><button>S</button><button class="selected">M</button><button>L</button><button>XL</button></div></div>
+        <div class="option-block"><label>QUANTITY</label><div class="quantity"><button id="modalMinus">−</button><span id="modalQty">1</span><button id="modalPlus">+</button></div></div>
+        <button class="btn btn-primary full" id="modalAdd">ADD TO CART</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
